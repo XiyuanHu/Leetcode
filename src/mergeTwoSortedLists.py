@@ -11,10 +11,11 @@ class Solution(object):
         :type l2: ListNode
         :rtype: ListNode
         """
-        if not l1:
-            return l2 
-        if not l2: 
-            return l1 
+        # if not l1:
+        #     return l2 
+        # if not l2: 
+        #     return l1 
+        #这段不需要！！
             
         dummy_head = ListNode(-1)
         head = dummy_head 
@@ -27,10 +28,12 @@ class Solution(object):
                 l2 = l2.next 
             head = head.next 
         
-        if l1:
-            head.next = l1 
-        if l2:
-            head.next = l2 
+        # if l1:
+        #     head.next = l1 
+        # if l2:
+        #      head.next = l2 
+        #高端版本！
+        head.next = l1 or l2
         
         return dummy_head.next 
             

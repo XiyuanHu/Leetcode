@@ -23,3 +23,12 @@ class Solution(object):
             fast = fast.next 
         slow.next = fast 
         return head 
+
+        #高端版本！！！
+        node = head 
+        while node:
+            while node.next and node.next.val == node.val:
+                node.next = node.next.next
+            node = node.next
+
+        return head

@@ -12,3 +12,5 @@ class Solution(object):
         else:
             last = lasts[len(lasts)-1]
             return len(last)
+
+        # 从最后往前读，找到的一个空格就可以
